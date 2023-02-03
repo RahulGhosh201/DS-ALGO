@@ -1,0 +1,128 @@
+stl=standard template library
+--------------------------------------
+array=  similar types of data stored in contigious memory
+  normal array declaration-
+  ------------------------
+  int basic[3]={1,2,3};
+  
+  
+  
+  stl array declaration-
+  --------------------------
+  array<data type,size of the array>
+  array<int,4>a={1,2,3,4}; 
+  
+  stl array is one kind of normal static array
+  
+  
+  
+  
+  ---------------------------------------------
+  size of the array-
+  int size=a.size();
+  
+  
+  ----------------------------------
+  print the elements of the array-
+  for(int i=0;i<size;i++){
+	cout<<a[i]<<endl;
+	}
+	op-
+	1
+	2
+	3
+	4
+	
+	
+  ------------------------------------------
+  element at index of an array-
+  cout<<"Element at 2nd index:"<<a.at(2)<<endl;
+  //arrayname.at(index) returns the indexed value stored in the array
+  
+  cout<<"Empty or not"<<a.empty()<<endl;
+  //it returns boolean value meaning if empty then '1' and if not empty then '0'
+  
+  
+  cout<<"First element:"<<a.front()<<endl;
+  //arrayname.front() returns the first value of the array
+  
+  
+  cout<<"Last element:"<<a.back()<<endl;
+  //arrayname.back() returns the last value of the array
+  
+  ---------------------------------------------------------------
+  
+  
+  vector-
+   
+  vector is an dynamic array. suppose size 4 r ekta array te 5 no index e 
+  ekta element insert korte chai6i jeta array te possible noi kintu vector 
+  r khetre vector double size r ekta vector banie previous vector r  element
+  gulo ekhane copy kore nie new element ta add kore dite parbo
+  
+  #include<vector>  korte hobe every time use korar time e 
+	
+  vector<int> v;
+  cout<<"memory space allocated for the vector:"<<v.capacity()<<endl;//0
+  //it returs the amount of memory alloacated by the vector
+  
+  v.push_back(1);cout<<v.capacity();//1
+  v.push_back(2);cout<<v.capacity();//2
+  v.push_back(3);cout<<v.capacity();//4  //[capacity*=2]
+  cout<<v.size();//3
+  cout<<v.at(2);//3
+  cout<<v.front();//1
+  cout<<v.back();//3
+  
+  
+  
+  --------------------------------------
+  
+  pop back from vector-
+  
+  cout<<"Before pop back element of the vector":<<endl;
+  
+  for(int i:v){
+	cout<<i<<" ";
+	}cout<<endl;//1 2 3
+	
+  v.pop_back();
+  
+  cout<<"After pop back element of the vector":<<endl;
+  
+  for(int i:v){
+	cout<<i<<" ";
+	}cout<<endl;//1 2//LIFO
+	
+  -----------------------------------------------
+  
+  vector<int> a(5,1);
+  //a named vector has 5 integer elements & all of them are initialized by 1
+  
+  -------------------------------------------------
+  
+  copy elements of a vector in another vector-
+  vector<int> ve(a);// a vector r element gulo ve vector e copy hye gelo
+  
+  
+  -------------------------------------------------------
+  
+  deque- doubly ended queue
+  operations like insertion,deletion etc can be done 
+  from both side(front & back) of the queue.Array die create kora hy etao
+  dynamic mane size is changable.  at operation die random access possible.
+  
+  #include<deque> korte hbe
+  
+  deque<int> d;
+  d.push_back(1);
+  d.push_front(10);
+  d.pop_back(2);
+  d.pop_front(15);
+  cout<<d.at(1);
+  cout<<d.front();
+  cout<<d.back();
+  d.erase(d.begin(),d.begin()+2);//first 2 to component delete hye jbe
+  //d.erase(range via index)
+  
+  
