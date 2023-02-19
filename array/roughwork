@@ -1,0 +1,41 @@
+1,2,3,4,5,6
+temp=6
+0, 1, 2, 3, 4
+i=0
+j=0
+0,
+//for d times reverse
+Algorithm reverse(arr, start, end):
+    mid = (start + end)/2
+    loop from i = start to mid:
+        swap (arr[i], arr[end-(mid-i+1)])
+
+Algorithm rotate(arr, d, N):
+    reverse(arr, 1, d) ;//1 theke d obdhi reverse korbo
+    reverse(arr, d + 1, N);//d theke n obdhi reverse korbo
+    reverse(arr, 1, N);//puro array ta reverse korbo
+	
+	
+	
+	//wave array
+	Sort the array.
+Traverse the array from index 0 to N-1, and increase the value of the index by 2.
+While traversing the array swap arr[i] with arr[i+1].
+Print the final array
+sort korar fole always arr[i+1]>arr[i]
+tai traverse e increment korar time e 2 index increment korbo and i k i+1 r sathe swap korbo fole new array te always arr[i+1]<arr[i]
+but eta amra use korte parbona karon eta nlogn lagbe though sc-o(1)
+just terverse korbo and i k 0 theke start kore i=i+2 te traberse korbo fole only even elements gulo
+k check korbo j tara i-1 and i+1 r theke boro kina nahole swap korbo 
+
+
+
+
+//sort an array
+3, 2, 5, 6, 1, 4
+i=0
+correct=2
+5!=3xx 
+i=1
+correct=2
+2!=
