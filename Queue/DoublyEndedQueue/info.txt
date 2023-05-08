@@ -1,0 +1,17 @@
+
+DEqueue(doubly ended queue)
+insertion and deletion both occurs from both front and rear
+incase of insertion from front , push the element in the front index and then front--
+types of DEqueue-
+    restricted i/p-insertion from front is not allowed
+    restricted o/p-deletion from rear is not allowed
+Data is same as queue
+operations-
+    isEmpty()
+    isFull()
+    enqueueF()
+    enqueueR()
+    dequeueF()
+    dequeueR()
+    initialize()
+    print()

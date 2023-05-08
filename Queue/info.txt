@@ -1,0 +1,11 @@
+queue works in FIFO(First In First Out)
+queue te f=r=-1 initially
+insertion hole rear++
+deletion hole front++
+queue empty hoy jokhn front=rear
+queue full hoy jokhn rear=q->size-1
+push korar somoy rear++ kore arr[rear]=element
+pop korar somoy arr[front]=-1 and front++
+
+
+
