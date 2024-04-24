@@ -1,0 +1,26 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+int soln(vector<int> arr){
+    int leftSum=0, rightSum=0;
+    for(int i=0;i<arr.size();i++){
+        rightSum+=arr[i];
+    }
+    for(int j=0;j<arr.size();j++){
+        rightSum-=arr[j];
+        if(leftSum==rightSum){
+            return j;
+        }
+        leftSum+=arr[j];
+    }
+    return -1;
+}
+
+int main() {
+    // Write C++ code here
+    vector<int> arr={-7,1,5,2,-4,3,0};
+    cout<<"Ans: "<<soln(arr)<<endl;
+
+    return 0;
+}

@@ -1,0 +1,39 @@
+// Online C++ compiler to run C++ program online
+//cypher code
+//ip:- str: AdfTu34, key:1
+//op:BegUv45
+
+//ip:- str:cFrA25 key:2
+//op:eHtC47
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string str;
+    cout<<"Enter str: ";
+    cin>>str;
+    int key;
+    cout<<"Enter key: ";
+    cin>>key;
+    
+    for(int i=0;i<str.length();i++){
+        //'A' TO 'Z'
+        if(str[i]>=65 && str[i]<=90){
+            int index=str[i]-'A';
+            index=(index+key)%26;
+            str[i]=index+'A';
+        }else if(str[i]>=97 && str[i]<=122){
+            int index=str[i]-'a';
+            index=(index+key)%26;
+            str[i]=index+'a';
+        }else{
+            int index=str[i]-'0';
+            index=(index+key)%10;
+            str[i]=index+'0';
+        }
+    }
+    cout<<"Ans: "<<str<<endl;
+}

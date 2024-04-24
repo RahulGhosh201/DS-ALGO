@@ -1,0 +1,31 @@
+#include<bits/stdc++.>
+using namespace std;
+
+void soln(vector<vector<int>> arr, int x){
+	int i=0, j=arr.size()-1;
+	bool found=false;
+	while(j>=0 && i<arr.size()){
+		if(arr[i][j]==x){
+			cout<<i<<" "<<j;
+			found=true;
+			break;
+		}else if(arr[i][j]>x){
+			j--;
+		}else{
+			i++;
+		}
+	}
+	if(!found){
+		cout<<"Not found"<<endl;
+	}
+}
+
+int main()
+{
+	vector<vector<int>> arr={{10,20,30,40},
+							{15,25,35,15},
+							{27,29,37,48},
+							{32,33,39,50}};
+	int x=29;
+	soln(arr,x);
+}

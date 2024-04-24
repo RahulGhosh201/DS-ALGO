@@ -1,0 +1,35 @@
+// ip:1,2,0,4,0
+// op;1,2,4,0,0
+
+// ip:4,0,5,1,0,0,5
+// op:4,5,1,5,0,0,0
+#include <bits/stdc++.h>
+using namespace std;
+
+void soln(vector<int> &arr){
+	int nonZeroIndex=0;
+	for(int i=0;i<arr.size();i++){
+		if(arr[i]!=0){
+			arr[nonZeroIndex++]=arr[i];
+		}
+	}
+	while(nonZeroIndex<arr.size()){
+		arr[nonZeroIndex++]=0;
+	}
+}
+
+int main() {
+    vector<int> arr={4,0,5,1,0,0,5};
+    vector<int> a={1,0,4,2,0};
+    cout<<"Before: ";
+    for(int i=0;i<a.size();i++){
+        cout<<a[i]<<" ";
+    }cout<<endl;
+    soln(a);
+    cout<<"After: ";
+    for(int i=0;i<a.size();i++){
+        cout<<a[i]<<" ";
+    }cout<<endl;
+
+    return 0;
+}
