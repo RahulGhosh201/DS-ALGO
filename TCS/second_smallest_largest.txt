@@ -1,0 +1,36 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+void soln(vector<int> arr){
+    int n=arr.size();
+    if(n==0 || n==1){
+        cout<<-1<<" "<<-1<<endl;
+    }
+    int smallest=INT_MAX, second_smallest=INT_MAX;
+    int largest=INT_MIN, second_largest=INT_MIN;
+    
+    for(int i=0;i<n;i++){
+        smallest=min(smallest,arr[i]);
+        largest=max(largest,arr[i]);
+    }
+    
+    for(int i=0;i<n;i++){
+        if(second_smallest>arr[i] && arr[i]!=smallest){
+            second_smallest=arr[i];
+        }
+        if(second_largest<arr[i] && arr[i]!=largest){
+            second_largest=arr[i];
+        }
+    }
+    
+    cout<<"Second smallest: "<<second_smallest<<endl;
+    cout<<"Second largest: "<<second_largest<<endl;
+}
+
+int main() {
+    vector<int> arr={1,2,4,7,7,5};
+    soln(arr);
+
+    return 0;
+}

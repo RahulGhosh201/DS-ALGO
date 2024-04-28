@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int soln(int n, int m){
+    int ans=0;
+    for(int i=n;i<=m;i++){
+        ans+=pow(i,3);
+    }
+    return ans;
+}
+
+int main() {
+    int n,m;
+	cin>>n;
+	cin>>m;
+    cout<<soln(range)<<endl;
+
+    return 0;
+}

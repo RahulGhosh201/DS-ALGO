@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int soln(string s1, string s2){
+    unordered_map<char,int> m;
+    for(int i=0;i<s1.size();i++){
+        m[s1[i]]++;
+    }
+    int ans=0;
+    for(int i=0;i<s2.size();i++){
+        ans+=m[s2[i]];
+    }
+    return ans;
+}
+
+int main() {
+    string s1, s2;
+    cin>>s1;
+    cin>>s2;
+    cout<<soln(s1,s2)<<endl;
+
+    return 0;
+}

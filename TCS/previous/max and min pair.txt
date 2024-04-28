@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+pair<int,int> soln(int n){
+    vector<int> arr;
+    while(n!=0){
+        arr.push_back(n%10);
+        n/=10;
+    }
+    int maxi=INT_MIN, mini=INT_MAX;
+    for(int i=0;i<arr.size();i++){
+        maxi=max(maxi,arr[i]);
+        mini=min(mini,arr[i]);
+    }
+    pair<int,int> ans(maxi,mini);
+    return ans;
+}
+
+int main() {
+    int n;
+    cin>>n;
+    pair<int,int> ans=soln(n);
+    cout<<ans.first<<" "<<ans.second<<endl;
+
+    return 0;
+}

@@ -1,0 +1,19 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+int soln(int n, int arr[]){
+    int sum=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+    }
+    return sum;
+}
+
+int main() {
+    int n=6, arr[]={1,2,1,1,5,1};
+    cout<<"Sum: "<<soln(n,arr)<<endl;
+    double average=(double)soln(n,arr)/n;
+    cout<<"Average: "<<average<<endl;
+    return 0;
+}

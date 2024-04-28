@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+// void removeDuplicates(vector<int>& arr){
+//     auto last=unique(arr.begin(),arr.end());
+//     arr.resize(distance(arr.begin(),last));
+// }
+
+vector<int> removeDuplicates(vector<int>& arr){
+    vector<int> result;
+    result.push_back(arr[0]);
+    for(int i=1;i<arr.size();i++){
+        if(arr[i]!=result.back()){
+            result.push_back(arr[i]);
+        }
+    }
+    return result;
+}
+
+int main()
+{
+    vector<int> arr={1,1,2,2,3,3,4};
+    vector<int> ans=removeDuplicates(arr);
+    cout<<"Ans: ";
+    for(auto it: ans){
+        cout<<it<<" ";
+    }cout<<endl;
+}
